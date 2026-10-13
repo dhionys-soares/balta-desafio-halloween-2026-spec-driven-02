@@ -30,8 +30,8 @@ esse link e acompanhe quantos acessos ele recebeu.
 - RF-06: o criador pode definir uma data de expiração para o link; a data e o
   limite de validade são interpretados em UTC, e o link permanece válido até o
   fim da data informada
-- RF-07: o sistema devolve o total de acessos de um link a qualquer pessoa que
-  conheça seu código
+- RF-07: o sistema devolve o total de acessos de um link somente para o
+  criador que apresenta a chave de gerenciamento do link
 - RF-08: os links e seus dados devem ser persistidos em banco de dados para que
   não se percam após reinício da aplicação
 
@@ -66,5 +66,5 @@ esse link e acompanhe quantos acessos ele recebeu.
 - Dois links não podem ter o mesmo código
 - Link com data de expiração vencida responde erro e não incrementa o contador
 - Um link ainda válido funciona até o fim de sua data de expiração em UTC
-- Qualquer pessoa que conheça o código pode consultar o total de acessos
+- O criador com a chave de gerenciamento correta pode consultar o total de acessos
 - Após reiniciar a aplicação, os links persistidos no banco continuam funcionando

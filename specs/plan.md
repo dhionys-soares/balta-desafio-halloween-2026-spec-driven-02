@@ -15,11 +15,11 @@ do projeto.
   entre reinícios
 - D-02: contador incrementado por UPDATE atômico no banco, e não lido e
   reescrito na aplicação, para atender a RN-04 sob acesso concorrente
-- D-03: código do link gerado com alfabeto sem caracteres ambíguos, para
-  reduzir erro de digitação em link lido em voz alta
+- D-03: código do link gerado com alfabeto A-Z e 1-9, respeitando RF-02 e
+  RN-05 e evitando caracteres ambíguos dentro desse conjunto
 - D-04: unicidade do código garantida por índice único no banco, além da
   checagem no serviço, porque a checagem sozinha tem corrida
-- D-05: chave de gerenciamento da DC-03 armazenada como hash, nunca em texto puro
+- D-05: chave de gerenciamento armazenada como hash, nunca em texto puro
 
 ## Modelo de dados
 Link
